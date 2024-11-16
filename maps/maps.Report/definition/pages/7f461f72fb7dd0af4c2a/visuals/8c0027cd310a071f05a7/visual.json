@@ -1,0 +1,118 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.4.0/schema.json",
+  "name": "8c0027cd310a071f05a7",
+  "position": {
+    "x": 10.45643153526971,
+    "y": 0,
+    "z": 0,
+    "height": 555.68464730290464,
+    "width": 1029.2116182572615,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Columns": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "map"
+                    }
+                  },
+                  "Property": "Fuel Type"
+                }
+              },
+              "queryRef": "map.Fuel Type",
+              "nativeQueryRef": "Fuel Type"
+            }
+          ]
+        },
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "map"
+                    }
+                  },
+                  "Property": "City"
+                }
+              },
+              "queryRef": "map.City",
+              "nativeQueryRef": "City"
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "map"
+                        }
+                      },
+                      "Property": "Station Name"
+                    }
+                  },
+                  "Function": 3
+                }
+              },
+              "queryRef": "Min(map.Station Name)",
+              "nativeQueryRef": "First Station Name"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "map"
+                  }
+                },
+                "Property": "City"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "subTotals": [
+        {
+          "properties": {
+            "columnSubtotals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "rowSubtotals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
