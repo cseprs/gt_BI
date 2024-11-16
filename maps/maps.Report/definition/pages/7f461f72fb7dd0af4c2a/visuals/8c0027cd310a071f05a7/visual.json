@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "map.Fuel Type",
-              "nativeQueryRef": "Fuel Type"
+              "nativeQueryRef": "Fuel Type",
+              "active": true
             }
           ]
         },
@@ -45,7 +46,8 @@
                 }
               },
               "queryRef": "map.City",
-              "nativeQueryRef": "City"
+              "nativeQueryRef": "City",
+              "active": true
             }
           ]
         },
